@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import { Shield, Clock, Leaf, Star, CheckCircle, ArrowRight } from "lucide-react";
+import { BLUR_HERO_ABOUT, BLUR_ABOUT_STORY } from "@/lib/blurData";
 
 export const metadata: Metadata = {
   title: "About Us | Equinox Window Cleaning",
@@ -49,6 +50,8 @@ export default function AboutPage() {
         eyebrow="About Equinox"
         title="Crystal Clear All Year"
         description="NC's fastest growing window cleaning company — built on precision, care, and a relentless commitment to quality."
+        image="/hero-about.jpg"
+        blurDataURL={BLUR_HERO_ABOUT}
       />
 
       {/* Our Story */}
@@ -59,10 +62,12 @@ export default function AboutPage() {
             <div className="relative h-80 sm:h-[450px] rounded-2xl overflow-hidden">
               <Image
                 src="/about-story.jpg"
-                alt="Beautiful home exterior in Cary, NC"
+                alt="Equinox team member performing gutter cleaning"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                placeholder="blur"
+                blurDataURL={BLUR_ABOUT_STORY}
               />
             </div>
 

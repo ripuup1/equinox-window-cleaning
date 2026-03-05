@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import { ArrowRight } from "lucide-react";
+import { BLUR_HERO_BLOG } from "@/lib/blurData";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -57,6 +58,8 @@ export default function BlogPage() {
         eyebrow="The Equinox Blog"
         title="Tips, Guides & Insights"
         description="Expert advice on keeping your home's exterior looking its best — from the team that does it every day."
+        image="/hero-blog.jpg"
+        blurDataURL={BLUR_HERO_BLOG}
       />
 
       {/* Blog Grid */}

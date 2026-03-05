@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import { Sparkles, Home, Droplets, TreePine, Footprints, Columns2, ArrowRight, Clock, Shield, CheckCircle } from "lucide-react";
+import { BLUR_HERO_SERVICES } from "@/lib/blurData";
 
 export const metadata: Metadata = {
   title: "Our Services | Equinox Window Cleaning",
@@ -109,6 +110,8 @@ export default function ServicesPage() {
         eyebrow="Our Professional Services"
         title="Expert Cleaning Solutions for Your Home"
         description="Discover a wide range of expert cleaning solutions tailored to your needs. From window cleaning to pressure washing, Equinox delivers exceptional results with precision, care, and eco-friendly techniques."
+        image="/hero-services.jpg"
+        blurDataURL={BLUR_HERO_SERVICES}
       />
 
       {/* Trust Bar */}

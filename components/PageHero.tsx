@@ -6,11 +6,13 @@ export default function PageHero({
   title,
   description,
   image,
+  blurDataURL,
 }: {
   eyebrow: string;
   title: string;
   description: string;
   image: string;
+  blurDataURL?: string;
 }) {
   return (
     <section className="relative pt-28 pb-14 sm:pt-36 sm:pb-20 overflow-hidden">
@@ -22,6 +24,8 @@ export default function PageHero({
         className="object-cover"
         priority
         sizes="100vw"
+        placeholder={blurDataURL ? "blur" : "empty"}
+        blurDataURL={blurDataURL}
       />
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-navy/60" />

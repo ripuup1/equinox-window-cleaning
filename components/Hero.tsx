@@ -3,6 +3,7 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import { BLUR_HERO_MAIN } from "@/lib/blurData";
 
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -79,6 +80,8 @@ export default function Hero() {
           className="object-cover"
           priority
           sizes="100vw"
+          placeholder="blur"
+          blurDataURL={BLUR_HERO_MAIN}
         />
         <div className="absolute inset-0 bg-navy/70" />
       </div>

@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import FAQAccordion from "@/components/FAQAccordion";
+import { BLUR_HERO_FAQ } from "@/lib/blurData";
 
 export const metadata: Metadata = {
   title: "FAQ | Equinox Window Cleaning",
@@ -85,6 +86,8 @@ export default function FAQPage() {
         eyebrow="Frequently Asked Questions"
         title="Got Questions? We've Got Answers."
         description="Everything you need to know about our services, technology, and how we work. Can't find what you're looking for? Give us a call."
+        image="/hero-faq.jpg"
+        blurDataURL={BLUR_HERO_FAQ}
       />
 
       {/* FAQ Sections */}
