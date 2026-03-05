@@ -9,7 +9,7 @@ export default function PageHero({
   description: string;
 }) {
   return (
-    <section className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 bg-navy noise-overlay overflow-hidden">
+    <section className="relative pt-24 pb-12 sm:pt-28 sm:pb-16 bg-navy noise-overlay overflow-hidden">
       {/* Decorative gradient orbs */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-sky/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/4" />
@@ -28,7 +28,7 @@ export default function PageHero({
         <p className="font-body text-gold text-xs sm:text-sm tracking-[0.25em] uppercase mb-4">
           {eyebrow}
         </p>
-        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 max-w-3xl mx-auto">
+        <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 max-w-3xl mx-auto">
           {title}
         </h1>
         <p className="font-body text-white/60 text-lg max-w-2xl mx-auto">
