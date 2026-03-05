@@ -58,11 +58,11 @@ export default function ServiceArea() {
     <section ref={sectionRef} className="py-20 sm:py-28 bg-cream">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
-        <div className="text-center mb-16">
+        <div className="mb-16 max-w-xl">
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-navy mb-4">
             Proudly Serving the Triangle
           </h2>
-          <p className="font-body text-navy/60 text-lg max-w-xl mx-auto">
+          <p className="font-body text-navy/60 text-lg">
             From Holly Springs to Wake Forest, we&apos;re your local window
             cleaning experts.
           </p>

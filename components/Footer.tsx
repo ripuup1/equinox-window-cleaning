@@ -1,14 +1,15 @@
 // Equinox Window Cleaning — Footer
 import { Mail, Phone, MapPin, Shield } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const quickLinks = [
-  { label: "Home", href: "#" },
-  { label: "Services", href: "#services" },
-  { label: "About", href: "#why-equinox" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Blog", href: "#" },
-  { label: "Contact", href: "#cta" },
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "About", href: "/about" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "mailto:Info@equinoxnc.net" },
 ];
 
 const servicesList = [
@@ -65,12 +66,12 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <a
+                  <Link
                     href={link.href}
                     className="font-body text-white/40 hover:text-gold text-sm transition-colors duration-300"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
