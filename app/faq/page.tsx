@@ -88,7 +88,7 @@ export default function FAQPage() {
       />
 
       {/* FAQ Sections */}
-      <section className="py-20 sm:py-28 bg-cream">
+      <section className="py-12 sm:py-16 bg-cream">
         <div className="max-w-3xl mx-auto px-6 space-y-16">
           {/* General */}
           <div>

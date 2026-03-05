@@ -52,7 +52,7 @@ export default function AboutPage() {
       />
 
       {/* Our Story */}
-      <section className="py-20 sm:py-28 bg-cream">
+      <section className="py-12 sm:py-16 bg-cream">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Image */}

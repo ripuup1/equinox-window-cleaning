@@ -130,7 +130,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services List */}
-      <section className="py-20 sm:py-28 bg-cream">
+      <section className="py-12 sm:py-16 bg-cream">
         <div className="max-w-7xl mx-auto px-6">
           <div className="space-y-24">
             {services.map((service, i) => {

@@ -60,7 +60,7 @@ export default function BlogPage() {
       />
 
       {/* Blog Grid */}
-      <section className="py-20 sm:py-28 bg-cream">
+      <section className="py-12 sm:py-16 bg-cream">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
             {posts.map((post) => (
