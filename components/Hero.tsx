@@ -80,15 +80,15 @@ export default function Hero() {
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
+        <div className="absolute inset-0 bg-navy/70" />
       </div>
 
       {/* Content */}
       <div
         ref={contentRef}
-        className="relative z-10 max-w-7xl mx-auto px-6 w-full"
+        className="relative z-10 max-w-7xl mx-auto px-6 w-full text-center"
       >
-        <div className="max-w-2xl">
+        <div className="max-w-3xl mx-auto">
           {/* Eyebrow */}
           <p className="hero-fade font-body text-sky text-xs sm:text-sm tracking-[0.25em] uppercase mb-6 opacity-0">
             North Carolina&apos;s Premium Window Cleaning
@@ -104,13 +104,13 @@ export default function Hero() {
           </h1>
 
           {/* Subheadline */}
-          <p className="hero-fade font-body text-white/70 text-base sm:text-lg max-w-lg mb-8 leading-relaxed opacity-0">
+          <p className="hero-fade font-body text-white/70 text-base sm:text-lg max-w-lg mx-auto mb-8 leading-relaxed opacity-0">
             Serving Cary, Raleigh, and the Triangle since day one. Backed by
             Non-Spot Technology and a 100% satisfaction guarantee.
           </p>
 
           {/* CTAs */}
-          <div className="hero-fade flex flex-wrap gap-4 mb-8 opacity-0">
+          <div className="hero-fade flex flex-wrap justify-center gap-4 mb-8 opacity-0">
             <a
               href="#cta"
               className="font-body font-semibold bg-gold hover:bg-gold-light text-navy px-8 py-3.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-gold/25 text-sm sm:text-base inline-flex items-center gap-2"
@@ -127,7 +127,7 @@ export default function Hero() {
           </div>
 
           {/* Trust Badges */}
-          <div className="hero-fade flex flex-wrap items-center gap-6 text-white/60 font-body text-xs sm:text-sm opacity-0">
+          <div className="hero-fade flex flex-wrap justify-center items-center gap-6 text-white/60 font-body text-xs sm:text-sm opacity-0">
             <span className="flex items-center gap-2">
               <span className="text-gold">&#10022;</span> Fully Insured
             </span>

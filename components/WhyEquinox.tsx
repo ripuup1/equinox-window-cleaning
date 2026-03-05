@@ -76,18 +76,18 @@ export default function WhyEquinox() {
         {/* Pillars */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
           {pillars.map((pillar) => (
-            <div key={pillar.number} className="pillar-item flex gap-6 opacity-0">
+            <div key={pillar.number} className="pillar-item text-center opacity-0">
               {/* Large Number */}
-              <span className="font-display text-6xl sm:text-7xl font-bold text-gold/20 leading-none shrink-0">
+              <span className="font-display text-6xl sm:text-7xl font-bold text-gold/20 leading-none">
                 {pillar.number}
               </span>
 
               {/* Content */}
-              <div>
+              <div className="mt-4">
                 <h3 className="font-display text-xl sm:text-2xl font-bold text-navy mb-3">
                   {pillar.title}
                 </h3>
-                <p className="font-body text-navy/60 leading-relaxed">
+                <p className="font-body text-navy/60 leading-relaxed max-w-xs mx-auto">
                   {pillar.description}
                 </p>
               </div>
