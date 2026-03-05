@@ -152,7 +152,7 @@ export default function Testimonials() {
           >
             {/* "After" Image (full width, bottom layer) */}
             <Image
-              src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80"
+              src="/service-exterior.jpg"
               alt="Clean, sparkling windows after professional cleaning"
               fill
               className="object-cover"
@@ -165,8 +165,8 @@ export default function Testimonials() {
               style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
             >
               <Image
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80"
-                alt="Dirty windows before professional cleaning"
+                src="/service-gutter.jpg"
+                alt="Windows before professional cleaning"
                 fill
                 className="object-cover brightness-75 contrast-110"
                 sizes="(max-width: 1024px) 100vw, 50vw"

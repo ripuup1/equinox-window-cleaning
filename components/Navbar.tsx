@@ -3,14 +3,20 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
-const navLinks = [
+const leftLinks = [
   { label: "Home", href: "#" },
   { label: "Services", href: "#services" },
   { label: "About", href: "#why-equinox" },
+];
+
+const rightLinks = [
   { label: "FAQ", href: "#faq" },
   { label: "Blog", href: "#" },
 ];
+
+const allLinks = [...leftLinks, ...rightLinks];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -33,24 +39,41 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-navy/95 backdrop-blur-md shadow-lg py-3"
-            : "bg-transparent py-5"
+            ? "bg-navy/95 backdrop-blur-md shadow-lg py-2"
+            : "bg-transparent py-4"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          {/* Logo */}
-          <a href="#" className="flex flex-col leading-none">
-            <span className="font-display text-2xl font-bold text-white tracking-wider">
-              EQUINOX
-            </span>
-            <span className="font-body text-[10px] text-sky tracking-[0.3em] uppercase mt-0.5">
-              Window Cleaning
-            </span>
+          {/* Left Links (desktop) */}
+          <div className="hidden lg:flex items-center gap-8 flex-1">
+            {leftLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="font-body text-sm text-white/80 hover:text-gold transition-colors duration-300 tracking-wide"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+
+          {/* Center Logo */}
+          <a href="#" className="relative flex-shrink-0">
+            <Image
+              src="/logo.png"
+              alt="Equinox Window Cleaning"
+              width={140}
+              height={70}
+              className={`transition-all duration-500 ${
+                scrolled ? "h-12 w-auto" : "h-16 w-auto"
+              }`}
+              priority
+            />
           </a>
 
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
+          {/* Right Links + CTA (desktop) */}
+          <div className="hidden lg:flex items-center gap-8 flex-1 justify-end">
+            {rightLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
@@ -94,8 +117,17 @@ export default function Navbar() {
           <X size={32} />
         </button>
 
+        {/* Mobile Logo */}
+        <Image
+          src="/logo.png"
+          alt="Equinox Window Cleaning"
+          width={120}
+          height={60}
+          className="h-16 w-auto mb-10"
+        />
+
         <div className="flex flex-col items-center gap-8">
-          {navLinks.map((link, i) => (
+          {allLinks.map((link, i) => (
             <a
               key={link.label}
               href={link.href}

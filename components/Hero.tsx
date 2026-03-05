@@ -73,8 +73,8 @@ export default function Hero() {
       {/* Background Image with Parallax */}
       <div ref={imageRef} className="absolute inset-0 -top-20 -bottom-20">
         <Image
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80"
-          alt="Pristine modern home exterior with clean windows"
+          src="/hero-main.png"
+          alt="Equinox Window Cleaning — pristine home exterior"
           fill
           className="object-cover"
           priority

@@ -2,6 +2,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 
 const steps = [
   {
@@ -9,24 +10,28 @@ const steps = [
     title: "SCRUB",
     description:
       "Max Clean solution applied with professional wand. Breaks down grime at the molecular level.",
+    image: "/process-scrub.png",
   },
   {
     number: "02",
     title: "SQUEEGEE",
     description:
       "Streak-free technique removes every trace of debris-filled water from the glass.",
+    image: "/process-squeegee.png",
   },
   {
     number: "03",
     title: "DETAIL",
     description:
       "Microfiber towel wipe-down of edges, frames, and sills. No drips. No residue.",
+    image: "/process-detail.png",
   },
   {
     number: "04",
     title: "NON-SPOT",
     description:
       "Invisible protective coating applied. Repels water, dirt, and debris. Keeps glass cleaner longer.",
+    image: "/process-nonspot.png",
   },
 ];
 
@@ -76,20 +81,24 @@ export default function Process() {
         </div>
 
         {/* Steps — horizontal on desktop, vertical on mobile */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-0 relative">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-6 relative">
           {/* Connecting line (desktop) */}
-          <div className="hidden md:block absolute top-12 left-[12.5%] right-[12.5%] h-px bg-gold/30" />
+          <div className="hidden md:block absolute top-[88px] left-[12.5%] right-[12.5%] h-px bg-gold/30" />
 
           {steps.map((step, i) => (
             <div
               key={step.number}
               className="process-step relative flex md:flex-col items-start md:items-center text-left md:text-center gap-5 md:gap-0 opacity-0"
             >
-              {/* Step Number Circle */}
-              <div className="relative z-10 w-24 h-24 shrink-0 rounded-full border-2 border-gold/40 flex items-center justify-center bg-navy md:mb-6">
-                <span className="font-display text-2xl font-bold text-gold">
-                  {step.number}
-                </span>
+              {/* Step Image */}
+              <div className="relative z-10 w-24 h-24 md:w-44 md:h-44 shrink-0 rounded-full overflow-hidden border-2 border-gold/40 bg-navy md:mb-4">
+                <Image
+                  src={step.image}
+                  alt={`Step ${step.number}: ${step.title}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 96px, 176px"
+                />
               </div>
 
               {/* Vertical connector (mobile) */}
@@ -98,7 +107,10 @@ export default function Process() {
               )}
 
               {/* Content */}
-              <div className="md:px-4">
+              <div className="md:px-2 md:mt-3">
+                <span className="font-display text-xs text-gold/60 tracking-wider">
+                  STEP {step.number}
+                </span>
                 <h3 className="font-body text-sm font-semibold text-gold tracking-[0.2em] mb-2">
                   {step.title}
                 </h3>

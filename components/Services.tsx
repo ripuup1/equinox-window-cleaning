@@ -16,36 +16,31 @@ const services = [
   {
     title: "Window Cleaning",
     description: "Interior & exterior cleaning with Non-Spot protective coating.",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80",
+    image: "/service-windows.jpg",
     icon: Sparkles,
   },
   {
     title: "House Washing",
     description: "Soft wash technology that removes grime without damaging siding.",
-    image:
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80",
+    image: "/service-house.jpg",
     icon: Home,
   },
   {
     title: "Driveway Cleaning",
     description: "High-pressure restoration for concrete, pavers, and asphalt.",
-    image:
-      "https://images.unsplash.com/photo-1558036117-15d82a90b9b1?w=600&q=80",
+    image: "/service-driveway.jpg",
     icon: Droplets,
   },
   {
     title: "Deck & Patio",
     description: "Revive your outdoor living space with deep pressure cleaning.",
-    image:
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80",
+    image: "/service-deck.jpg",
     icon: TreePine,
   },
   {
     title: "Sidewalk Washing",
     description: "Restore walkways and paths to look brand new.",
-    image:
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80",
+    image: "/service-pressure.png",
     icon: Footprints,
   },
 ];

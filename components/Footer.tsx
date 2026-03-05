@@ -1,5 +1,6 @@
 // Equinox Window Cleaning — Footer
 import { Mail, Phone, MapPin, Shield } from "lucide-react";
+import Image from "next/image";
 
 const quickLinks = [
   { label: "Home", href: "#" },
@@ -27,13 +28,13 @@ export default function Footer() {
           {/* Col 1 — Brand */}
           <div>
             <div className="mb-4">
-              <span className="font-display text-2xl font-bold text-white tracking-wider">
-                EQUINOX
-              </span>
-              <br />
-              <span className="font-body text-[10px] text-sky tracking-[0.3em] uppercase">
-                Window Cleaning
-              </span>
+              <Image
+                src="/logo.png"
+                alt="Equinox Window Cleaning"
+                width={140}
+                height={70}
+                className="h-16 w-auto"
+              />
             </div>
             <p className="font-body text-white/40 text-sm leading-relaxed mb-6">
               Premium window and exterior cleaning for homes across North
