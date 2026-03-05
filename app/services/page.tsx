@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
 import { Sparkles, Home, Droplets, TreePine, Footprints, Columns2, ArrowRight, Clock, Shield, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -104,23 +105,11 @@ export default function ServicesPage() {
     <main>
       <Navbar />
 
-      {/* Hero */}
-      <section className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 bg-navy">
-        <div className="max-w-7xl mx-auto px-6">
-          <p className="font-body text-gold text-xs sm:text-sm tracking-[0.25em] uppercase mb-4">
-            Our Professional Services
-          </p>
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 max-w-3xl">
-            Expert Cleaning Solutions for Your Home
-          </h1>
-          <p className="font-body text-white/60 text-lg max-w-2xl">
-            Discover a wide range of expert cleaning solutions tailored to your
-            needs. From window cleaning to pressure washing, Equinox delivers
-            exceptional results with precision, care, and eco-friendly
-            techniques.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Our Professional Services"
+        title="Expert Cleaning Solutions for Your Home"
+        description="Discover a wide range of expert cleaning solutions tailored to your needs. From window cleaning to pressure washing, Equinox delivers exceptional results with precision, care, and eco-friendly techniques."
+      />
 
       {/* Trust Bar */}
       <section className="bg-navy-light py-6 border-t border-white/5">

@@ -64,11 +64,11 @@ export default function WhyEquinox() {
     >
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
-        <div className="mb-16 max-w-xl">
+        <div className="text-center mb-16">
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-navy mb-4">
             Why Equinox
           </h2>
-          <p className="font-body text-navy/60 text-lg">
+          <p className="font-body text-navy/60 text-lg max-w-xl mx-auto">
             Three promises that set us apart from every other cleaning company.
           </p>
         </div>

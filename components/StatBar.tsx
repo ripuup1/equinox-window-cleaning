@@ -29,33 +29,35 @@ function AnimatedCounter({
   triggered: boolean;
 }) {
   const [count, setCount] = useState(0);
+  const hasAnimated = useRef(false);
 
   useEffect(() => {
-    if (!triggered) return;
+    if (!triggered || hasAnimated.current) return;
+    hasAnimated.current = true;
 
     const isDecimal = value % 1 !== 0;
     const duration = 2000;
-    const steps = 60;
-    const increment = value / steps;
+    const totalSteps = 60;
+    const increment = value / totalSteps;
     let current = 0;
     let step = 0;
 
     const timer = setInterval(() => {
       step++;
       current += increment;
-      if (step >= steps) {
+      if (step >= totalSteps) {
         setCount(value);
         clearInterval(timer);
       } else {
         setCount(isDecimal ? parseFloat(current.toFixed(1)) : Math.floor(current));
       }
-    }, duration / steps);
+    }, duration / totalSteps);
 
     return () => clearInterval(timer);
   }, [triggered, value]);
 
   return (
-    <span className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+    <span className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white tabular-nums">
       {prefix}
       {value % 1 !== 0 ? count.toFixed(1) : count}
       {suffix}
@@ -68,6 +70,8 @@ export default function StatBar() {
   const [triggered, setTriggered] = useState(false);
 
   useEffect(() => {
+    if (!ref.current) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -75,10 +79,10 @@ export default function StatBar() {
           observer.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.1, rootMargin: "50px" }
     );
 
-    if (ref.current) observer.observe(ref.current);
+    observer.observe(ref.current);
     return () => observer.disconnect();
   }, []);
 

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
 import { Shield, Clock, Leaf, Star, CheckCircle, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -44,21 +45,11 @@ export default function AboutPage() {
     <main>
       <Navbar />
 
-      {/* Hero */}
-      <section className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 bg-navy">
-        <div className="max-w-7xl mx-auto px-6">
-          <p className="font-body text-gold text-xs sm:text-sm tracking-[0.25em] uppercase mb-4">
-            About Equinox
-          </p>
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 max-w-3xl">
-            Crystal Clear All Year
-          </h1>
-          <p className="font-body text-white/60 text-lg max-w-2xl">
-            NC&apos;s fastest growing window cleaning company — built on
-            precision, care, and a relentless commitment to quality.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="About Equinox"
+        title="Crystal Clear All Year"
+        description="NC's fastest growing window cleaning company — built on precision, care, and a relentless commitment to quality."
+      />
 
       {/* Our Story */}
       <section className="py-20 sm:py-28 bg-cream">
@@ -67,8 +58,8 @@ export default function AboutPage() {
             {/* Image */}
             <div className="relative h-80 sm:h-[450px] rounded-2xl overflow-hidden">
               <Image
-                src="/service-windows.jpg"
-                alt="Equinox Window Cleaning team at work"
+                src="/about-story.jpg"
+                alt="Beautiful home exterior in Cary, NC"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

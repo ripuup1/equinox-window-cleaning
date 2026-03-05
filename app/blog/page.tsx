@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
@@ -27,7 +28,7 @@ const posts = [
       "Pollen season, humidity, and red clay — here's how Triangle homeowners should schedule their window cleaning for best results.",
     category: "Tips & Guides",
     date: "Coming Soon",
-    image: "/service-windows.jpg",
+    image: "/service-exterior.jpg",
   },
   {
     title: "Pressure Washing vs. Soft Washing: What Your Home Actually Needs",
@@ -35,7 +36,7 @@ const posts = [
       "Not all exterior cleaning is the same. Learn the difference between pressure washing and soft washing, and which one is right for your siding.",
     category: "Education",
     date: "Coming Soon",
-    image: "/service-house.jpg",
+    image: "/service-pressure.png",
   },
   {
     title: "5 Signs Your Gutters Need Professional Cleaning",
@@ -43,7 +44,7 @@ const posts = [
       "Overflowing in a rainstorm? Sagging at the seams? Here are the warning signs that it's time to call in the pros.",
     category: "Home Maintenance",
     date: "Coming Soon",
-    image: "/service-gutter.jpg",
+    image: "/about-story.jpg",
   },
 ];
 
@@ -52,21 +53,11 @@ export default function BlogPage() {
     <main>
       <Navbar />
 
-      {/* Hero */}
-      <section className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 bg-navy">
-        <div className="max-w-7xl mx-auto px-6">
-          <p className="font-body text-gold text-xs sm:text-sm tracking-[0.25em] uppercase mb-4">
-            The Equinox Blog
-          </p>
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 max-w-3xl">
-            Tips, Guides &amp; Insights
-          </h1>
-          <p className="font-body text-white/60 text-lg max-w-2xl">
-            Expert advice on keeping your home&apos;s exterior looking its best
-            — from the team that does it every day.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="The Equinox Blog"
+        title="Tips, Guides & Insights"
+        description="Expert advice on keeping your home's exterior looking its best — from the team that does it every day."
+      />
 
       {/* Blog Grid */}
       <section className="py-20 sm:py-28 bg-cream">

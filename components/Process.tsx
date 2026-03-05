@@ -75,7 +75,7 @@ export default function Process() {
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             Our Non-Spot Process
           </h2>
-          <p className="font-body text-white/50 text-lg">
+          <p className="font-body text-white/50 text-lg max-w-xl mx-auto">
             A methodical approach to streak-free perfection.
           </p>
         </div>

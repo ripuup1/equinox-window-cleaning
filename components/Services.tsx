@@ -81,11 +81,11 @@ export default function Services() {
     <section id="services" ref={sectionRef} className="py-20 sm:py-28 bg-cream">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
-        <div className="mb-16 max-w-2xl">
+        <div className="text-center mb-16">
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-navy mb-4">
             What We Do Best
           </h2>
-          <p className="font-body text-navy/60 text-lg">
+          <p className="font-body text-navy/60 text-lg max-w-2xl mx-auto">
             From spotless windows to pristine driveways — we handle the exterior
             so you don&apos;t have to.
           </p>
@@ -131,7 +131,7 @@ export default function Services() {
         </div>
 
         {/* CTA */}
-        <div className="mt-12">
+        <div className="text-center mt-12">
           <a
             href="/services"
             className="inline-flex items-center gap-2 font-body font-semibold text-gold hover:text-gold-dark transition-colors duration-300"

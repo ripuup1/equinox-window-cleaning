@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
 import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata: Metadata = {
@@ -80,22 +81,11 @@ export default function FAQPage() {
     <main>
       <Navbar />
 
-      {/* Hero */}
-      <section className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 bg-navy">
-        <div className="max-w-7xl mx-auto px-6">
-          <p className="font-body text-gold text-xs sm:text-sm tracking-[0.25em] uppercase mb-4">
-            Frequently Asked Questions
-          </p>
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 max-w-3xl">
-            Got Questions? We&apos;ve Got Answers.
-          </h1>
-          <p className="font-body text-white/60 text-lg max-w-2xl">
-            Everything you need to know about our services, technology, and how
-            we work. Can&apos;t find what you&apos;re looking for? Give us a
-            call.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Frequently Asked Questions"
+        title="Got Questions? We've Got Answers."
+        description="Everything you need to know about our services, technology, and how we work. Can't find what you're looking for? Give us a call."
+      />
 
       {/* FAQ Sections */}
       <section className="py-20 sm:py-28 bg-cream">
