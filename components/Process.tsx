@@ -71,7 +71,7 @@ export default function Process() {
     <section ref={sectionRef} className="py-20 sm:py-28 bg-navy relative">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
-        <div className="mb-16 max-w-xl">
+        <div className="text-center mb-16">
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             Our Non-Spot Process
           </h2>
